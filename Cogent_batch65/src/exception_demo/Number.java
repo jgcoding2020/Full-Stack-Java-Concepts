@@ -23,9 +23,13 @@ public class Number {
 		this.result = this.x * this.y;
 		System.out.println("Multiplication = " + this.getResult());
 	}
-	public void div(){
-		this.result = this.x / this.y;
+	public void div() throws ArithmeticException{
+		if (this.y == 0)
+			throw new ArithmeticException();
+		else {
+			this.result = this.x / (double)this.y;
 		System.out.println("Division = " + this.getResult());
+		}
 	}
 
 	public int getX() {

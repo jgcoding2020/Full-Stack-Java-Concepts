@@ -6,7 +6,6 @@ public class CalcMenu {
 
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
-		Number numObj;
 		int choice = 0;
 		int numOne = 0;
 		int numTwo = 0;
@@ -20,32 +19,38 @@ public class CalcMenu {
 			System.out.println("4 -> Divide");
 			System.out.println("5 -> Exit");
 			choice = sc.nextInt();
-			System.out.println("Please enter 2 numbers: ");
-			numOne = sc.nextInt();
-			numTwo = sc.nextInt();
-			numObj = new Number(numOne, numTwo);
+			if (choice != 5){
+				System.out.println("Please enter 2 numbers ");
+				numOne = sc.nextInt();
+				numTwo = sc.nextInt();
+			}
 			
 			switch (choice){
 			case 1:
-				numObj.add();
+				System.out.println("Addition: ");
+				new Number(numOne, numTwo).add();
 				break;
 			case 2:
-				numObj.sub();
+				System.out.println("Difference: first - second: ");
+				new Number(numOne, numTwo).sub();
 				break;
 			case 3:
-				numObj.mul();
+				System.out.println("Multiplication: ");
+				new Number(numOne, numTwo).mul();
 				break;
 			case 4:
 				try {
-					numObj.div();
+					System.out.println("Division: first/ second: ");
+					new Number(numOne, numTwo).div();
 				} catch (ArithmeticException e){
-					System.out.println("Division by 0 not allowed");
+					System.out.println("No Division by zero allowed");
+					e.printStackTrace();
 				}
 				break;
 			case 5:
-				System.out.println("Successfully exited");
 				break;
 			}
 		} while (choice != 5);
+		System.out.println("Successfully exited");
 	}
 }
