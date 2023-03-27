@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		int choice = 0;
-		Product[] products = null;
+		Product[] products = new Product[10];
 		ProductDAO productDAO = new ProductDAO();
 		do {
 			System.out.println("****************Menu****************");
@@ -20,11 +20,9 @@ public class Main {
 			choice = sc.nextInt();
 			
 			switch (choice){
+			
 			case 1:
-				int num = 0;
-				System.out.println("Enter number of products to add");
-				num = sc.nextInt();
-				products = new Product[num];
+				System.out.println("Please add 10 products: ");
 				for (int i = 0; i < products.length; i++){
 					productDAO.create(products, i);
 				}
