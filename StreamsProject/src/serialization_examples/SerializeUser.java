@@ -1,5 +1,6 @@
 package serialization_examples;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
@@ -9,16 +10,19 @@ public class SerializeUser {
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 		FileOutputStream fos;
+		File outputFile = new File("C:/Users/jgard/workspace/StreamsProject/src/Streams/user.ser");
 		ObjectOutputStream oos;
-		User user;
-		int choice = 0;
+		int choice = 1;
 		int rollNum;
 		String name;
 		int age;
 		String address;
-		do {
-			try {
-			
+		System.out.println("Enter user information: \n");
+		try {
+			fos = new FileOutputStream(outputFile);
+			oos = new ObjectOutputStream(fos);
+				
+			while (choice != 2){
 				System.out.println("Please enter name: ");
 				name = sc.next();
 				System.out.println("Please enter Address: ");
@@ -27,33 +31,33 @@ public class SerializeUser {
 				rollNum = sc.nextInt();
 				System.out.println("Please enter age: ");
 				age = sc.nextInt();
-				
-				user = new User(rollNum, name, age, address);
 				System.out.println("Would you like to save this user information?");
 				System.out.println("1 -> Yes");
 				System.out.println("2 -> No");
 				choice = sc.nextInt();
-				switch (choice){
-				case 1:
-					fos = new FileOutputStream("C:/Users/jgard/workspace/StreamsProject/src/Streams/user.ser");
-					oos = new ObjectOutputStream(fos);
-					oos.writeObject(user);
-					System.out.println("Information serialized successfully");
-					fos.close();
-					oos.close();
-					break;
-				case 2:
-					System.out.println("you have successfully exited.");
-					break;
-				default:
-					break;
-				}	 
-			
-			} catch (BlankFieldException b){
+				if (choice == 1){
+					oos.writeObject(new User(rollNum, name, age, address));
+					System.out.println("Would you like to add a user?");
+					System.out.println("1 -> Yes");
+					System.out.println("2 -> No");
+					choice = sc.nextInt();
+				}
+				else {
+					System.out.println("Would you like to add a user?");
+					System.out.println("1 -> Yes");
+					System.out.println("2 -> No");
+					choice = sc.nextInt();
+				}
+			}
+			fos.close();
+			oos.close();
+		} catch (BlankFieldException b){
 			System.out.println(b.getMessage());
-			} catch (Exception e){
+		} catch (Exception e){
+			System.out.println("An exception occurred");
 			e.printStackTrace();
 			}
-		} while (choice != 2);
+	System.out.println("Information serialized");
+	System.out.println("You have successfully exited.");
 	}
 }
