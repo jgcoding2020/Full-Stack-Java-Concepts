@@ -15,8 +15,7 @@ public class MyThreadDemo extends Thread {
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.out.println("Interupted exception occurred.");
 			}
 		}
 		System.out.println("exiting child thread");
@@ -29,8 +28,7 @@ public class MyThreadDemo extends Thread {
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				System.out.println("Interupted exception occurred.");
 			}
 		}
 		System.out.println("exiting main thread");

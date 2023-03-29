@@ -15,7 +15,7 @@ public class Rectangle {
 	}
 	
 	public void calcArea(){
-		int area = this.length * this.breadth;
+		int area = getLength() * getBreadth();
 		System.out.println("Rectangle area: " + area);
 	}
 	

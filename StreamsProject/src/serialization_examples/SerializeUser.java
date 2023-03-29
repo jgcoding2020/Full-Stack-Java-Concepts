@@ -55,8 +55,7 @@ public class SerializeUser {
 			System.out.println(b.getMessage());
 		} catch (Exception e){
 			System.out.println("An exception occurred");
-			e.printStackTrace();
-			}
+		}
 	System.out.println("Information serialized");
 	System.out.println("You have successfully exited.");
 	}

@@ -16,7 +16,6 @@ public class DeserializeUser implements Serializable {
 			fis = new FileInputStream("C:/Users/jgard/workspace/StreamsProject/src/Streams/user.ser");
 			ois = new ObjectInputStream(fis);
 			
-			
 			for (;;){
 				Object obj = ois.readObject();
 				User user = (User)obj;
@@ -30,15 +29,13 @@ public class DeserializeUser implements Serializable {
 			System.out.println("End of file.");
 		} catch (Exception e){
 			System.out.println("Exception occurred");
-			e.printStackTrace();
 		}
 		
 		try {
 			ois.close();
 			fis.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("IOException occured");
 		}
 	}
 }

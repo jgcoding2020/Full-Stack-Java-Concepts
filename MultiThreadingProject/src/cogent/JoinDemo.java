@@ -25,8 +25,7 @@ public class JoinDemo extends Thread {
 		try {
 			jd.join();
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Interupted exception occurred.");
 		}
 		
 		System.out.println("Sum of first " + JoinDemo.n + " = " + JoinDemo.sum);
