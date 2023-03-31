@@ -11,7 +11,7 @@ public class Student{
 	}
 	
 	public String toString(){
-		return (this.getRollNum() + " " + this.getName());
+		return (this.rollNum + " " + this.name);
 	}
 
 	public int getRollNum() {
