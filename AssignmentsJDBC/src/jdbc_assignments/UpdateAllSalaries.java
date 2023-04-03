@@ -27,6 +27,7 @@ public class UpdateAllSalaries {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+		sc.close();
 	}
 
 }

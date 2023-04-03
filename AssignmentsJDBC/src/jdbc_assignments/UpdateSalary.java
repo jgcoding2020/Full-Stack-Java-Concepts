@@ -30,6 +30,7 @@ public class UpdateSalary {
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+		sc.close();
 	}
 
 }

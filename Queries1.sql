@@ -111,6 +111,29 @@ insert into dept(dept_name, emp_no, emp_name, emp_sal) values (10, 6, 'Jim', 450
 
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'Cogent@123';
 
+use cogent;
+show tables;
+
+create table dept (
+	dept_name int,
+    emp_no int,
+    emp_name varchar(40),
+    emp_sal Int,
+    emp_manager varchar(40),
+    emp_title varchar(40)
+);
+insert into dept(dept_name, emp_no, emp_name, emp_sal, emp_manager, emp_title) values (10, 1, 'John', 60000, 'Greg', 'analyst');
+insert into dept(dept_name, emp_no, emp_name, emp_sal, emp_manager, emp_title) values (20, 2, 'Janet', 95000, 'Susan', 'developer');
+insert into dept(dept_name, emp_no, emp_name, emp_sal, emp_manager, emp_title) values (30, 3, 'Harry', 110000, 'Chef', 'sales');
+insert into dept(dept_name, emp_no, emp_name, emp_sal, emp_manager, emp_title) values (10, 4, 'Xena', 65000, 'Greg', 'analyst');
+insert into dept(dept_name, emp_no, emp_name, emp_sal, emp_manager, emp_title) values (20, 5, 'Benny', 115000, 'Susan', 'developer');
+insert into dept(dept_name, emp_no, emp_name, emp_sal, emp_manager, emp_title) values (30, 6, 'Hercules', 55000, 'Chef', 'sales');
+insert into dept(dept_name, emp_no, emp_name, emp_sal, emp_manager, emp_title) values (40, 7, 'Mary', 58000, 'Carry', 'analyst');
+show tables;
+select * from dept;
+
+
+
 DELIMITER $$
 USE `cogent`$$
 CREATE PROCEDURE `proc_empname` (empno int)
