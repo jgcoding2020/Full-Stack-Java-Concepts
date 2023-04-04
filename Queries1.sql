@@ -132,8 +132,6 @@ insert into dept(dept_name, emp_no, emp_name, emp_sal, emp_manager, emp_title) v
 show tables;
 select * from dept;
 
-
-
 DELIMITER $$
 USE `cogent`$$
 CREATE PROCEDURE `proc_empname` (empno int)
@@ -149,3 +147,6 @@ BEGIN
  select dept_name from dept where emp_no = empno;
 END$$
 DELIMITER ;
+
+use cogentdb;
+show tables;

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean name="hello" class="cogent.infotech.com.Greeting"></bean>
+    <bean name="emp" class="cogent.infotech.com.Employee" p:id="10" p:name="Joshua"></bean>
+<!--     <bean name="person" class="cogent.infotech.com.Person"> -->
+
+<!--     	 constructor based injection   -->
+
+<!--     	<constructor-arg value="1000"></constructor-arg> -->
+<!--     	<constructor-arg value="Ifrit"></constructor-arg> -->
+<!--     	<constructor-arg value="50"></constructor-arg> -->
+    	
+<!--     	for setter based injection -->
+
+<!--     	<property name="id" value="1000"></property> -->
+<!--     	<property name="name" value="Jerry"></property> -->
+<!--     	<property name="age" value="25"></property> -->
+<!--     </bean> -->
+    
+<!--     for list injection -->
+
+<!--     <bean name="hospital" class="cogent.infotech.com.Hospital"> -->
+<!--     	<property name="name"> -->
+<!--     		<value>North West Regional</value> -->
+<!--     	</property> -->
+<!--     	<property name="department"> -->
+<!--     		<list> -->
+<!--     			<value>Cardiac</value> -->
+<!--     			<value>Orthopedic</value> -->
+<!--     			<value>Psychiatry</value> -->
+<!--     		</list> -->
+<!--     	</property> -->
+<!--     </bean> -->
+
+<!-- 	Customer class map injection -->
+
+<!--     <bean name="customer" class="cogent.infotech.com.Customer"> -->
+<!--     	<property name="id" value="10"></property> -->
+<!--     	<property name="products"> -->
+<!--     		<map> -->
+<!--     			<entry key="1" value="eraser"></entry> -->
+<!--     			<entry key="2" value="pen"></entry> -->
+<!--     			<entry key="3" value="paper"></entry> -->
+<!--     		</map> -->
+<!--     	</property> -->
+<!--     </bean> -->
+
+<!-- 	reference injection scores and student classes -->
+	<bean name="scores" class="cogent.infotech.com.Scores" p:maths="95" p:physics="92" p:chemistry="89"></bean>
+	<bean name="student" class="cogent.infotech.com.Student" p:scores-ref="scores"></bean>
+</beans>
