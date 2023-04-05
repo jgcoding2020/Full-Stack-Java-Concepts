@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+ 	<bean name="person" class="cogent.infotech.com.autowire.byconstructor.Person" autowire="constructor"></bean>
+ 	<bean name="car" class="cogent.infotech.com.autowire.byconstructor.Car">
+ 		<property name="model" value="Viper"></property>
+ 		<property name="price" value="150000"></property>
+ 	</bean>
+ 	<bean name="address" class="cogent.infotech.com.autowire.byconstructor.Address">
+ 		<property name="houseNo" value="4356"></property>
+ 		<property name="street" value="First Parkway"></property>
+ 		<property name="city" value="Orlando"></property>
+ 	</bean>
+</beans>
