@@ -6,4 +6,15 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- 	Customer class map injection -->
+    <bean name="customer" class="cogent.infotech.com.map_injection.Customer">
+    	<property name="id" value="10"></property>
+    	<property name="products">
+    		<map>
+    			<entry key="1" value="eraser"></entry>
+    			<entry key="2" value="pen"></entry>
+    			<entry key="3" value="paper"></entry>
+    		</map>
+    	</property>
+    </bean>
 </beans>

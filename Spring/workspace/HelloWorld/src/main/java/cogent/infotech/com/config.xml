@@ -6,4 +6,10 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean name="person" class="cogent.infotech.com.Person">
+		<!-- setter based injection -->
+    	<property name="id" value="1000"></property>
+    	<property name="name" value="Jerry"></property>
+    	<property name="age" value="25"></property>
+    </bean>
 </beans>

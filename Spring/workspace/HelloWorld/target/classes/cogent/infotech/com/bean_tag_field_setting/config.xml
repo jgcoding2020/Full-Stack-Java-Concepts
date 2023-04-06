@@ -6,4 +6,5 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean name="emp" class="cogent.infotech.com.bean_tag_field_setting.Employee" p:id="10" p:name="Joshua"></bean>
 </beans>

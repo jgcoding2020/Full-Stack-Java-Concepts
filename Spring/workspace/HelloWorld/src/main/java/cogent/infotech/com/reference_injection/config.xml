@@ -6,4 +6,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- 	reference injection scores and student classes -->
+	<bean name="scores" class="cogent.infotech.com.reference_injection.Scores" p:maths="95" p:physics="92" p:chemistry="89"></bean>
+	<bean name="student" class="cogent.infotech.com.reference_injection.Student" p:scores-ref="scores"></bean>
 </beans>

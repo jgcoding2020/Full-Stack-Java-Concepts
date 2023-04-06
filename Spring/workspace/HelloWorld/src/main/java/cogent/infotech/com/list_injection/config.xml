@@ -6,4 +6,17 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- list injection -->
+    <bean name="hospital" class="cogent.infotech.com.list_injection.Hospital">
+    	<property name="name">
+    		<value>North West Regional</value>
+    	</property>
+    	<property name="department">
+    		<list>
+    			<value>Cardiac</value>
+    			<value>Orthopedic</value>
+    			<value>Psychiatry</value>
+    		</list>
+    	</property>
+    </bean>
 </beans>
