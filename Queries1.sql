@@ -150,3 +150,16 @@ DELIMITER ;
 
 use cogentdb;
 show tables;
+select * from employee;
+use cogent;
+
+create database mydb;
+use mydb;
+show tables;
+create table employee(
+	id int primary key,
+    fname varchar(40),
+    lname varchar(40)
+);
+select * from employee;
+drop table employee;
