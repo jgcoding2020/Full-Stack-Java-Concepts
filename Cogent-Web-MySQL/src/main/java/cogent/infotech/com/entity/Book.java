@@ -47,6 +47,4 @@ public class Book {
 	public void setBookPrice(double bookPrice) {
 		this.bookPrice = bookPrice;
 	}
-	
-	
 }
