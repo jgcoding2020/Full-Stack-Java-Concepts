@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Canvas</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1200" height="500" style="border:5px ridge black"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+        // left circle
+        ctx.beginPath();
+        ctx.arc(300, 170, 100, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // face
+        ctx.beginPath();
+        ctx.arc(800, 250, 75, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // body
+        ctx.beginPath();
+        ctx.arc(800, 400, 75, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // left ear
+        ctx.beginPath();
+        ctx.arc(720, 170, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // right ear
+        ctx.beginPath();
+        ctx.arc(880, 170, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // right eye
+        ctx.beginPath();
+        ctx.arc(775, 225, 15, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // left eye
+        ctx.beginPath();
+        ctx.arc(825, 225, 15, 0, 2 * Math.PI);
+        ctx.stroke();
+
+        // mouth
+        ctx.beginPath();
+        ctx.arc(795, 280, 25, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>

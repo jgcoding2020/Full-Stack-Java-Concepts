@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas-1" width="1000" height="550" style="border: 5px ridge black"></canvas>
+    <script>
+        var v = document.getElementById("canvas-1");
+        var ctx = v.getContext("2d");
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(150, 100, 150, 150);
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(450, 125, 100, 100);
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(550, 200, 150, 150);
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(700, 125, 100, 100);
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(550, 370, 150, 150);
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(575, 250, 25, 25);
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(650, 250, 25, 25);
+
+        ctx.fillStyle = "black";
+        ctx.fillRect(600, 280, 50, 50);
+    </script>
+</body>
+
+</html>

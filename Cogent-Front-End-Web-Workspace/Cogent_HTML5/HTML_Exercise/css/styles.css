@@ -1,0 +1,39 @@
+h1,h2 {
+    background-color: rgb(171, 171, 178);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+img {
+    border-style: ridge;
+    border-width: 15px;
+    border-color: black;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+td, th {
+    text-align: center;
+    padding: 5px;
+}
+
+.table-1 tr:nth-child(odd) {
+    background-color: white;
+}
+
+a:link {
+    color: blue;
+}
+  
+a:visited {
+    color: blue;
+}
+  
+a:hover {
+    color: green;
+}
+  
+a:active {
+    color: yellow;
+}
