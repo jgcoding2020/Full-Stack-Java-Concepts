@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Literal</title>
+        
+    </head>
+    <body>
+        <script>
+            function myToString(){
+                return "" + this.title + " by " + this.author;
+            }
+
+            function showAll(){
+                window.alert(this.toString());
+            }
+
+            var myBook = {
+                author: "John Doe",
+                title: "The Beginning",
+                print: showAll,
+                toString: myToString
+            }
+
+            myBook.print();
+        </script>
+    </body>
+</html>

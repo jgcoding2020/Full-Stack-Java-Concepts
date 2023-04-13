@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Method</title>
+    </head>
+    <body>
+        <script>
+            function sayHello(name){
+                window.alert("Hello, " + name)
+            }
+
+            var myBook = new Object();
+            var mySite = new Object();
+
+            myBook.author = "Mozart";
+            mySite.url = "http://cogent.infotech.com";
+
+            myBook.greet = sayHello;
+            mySite.greet = sayHello;
+            myBook.greet(myBook.author);
+
+            delete myBook.greet;
+        </script>
+    </body>
+</html>
