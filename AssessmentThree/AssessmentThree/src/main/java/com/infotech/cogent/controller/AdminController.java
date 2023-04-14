@@ -29,28 +29,31 @@ public class AdminController {
 		return movieService.updateMovie(movie);
 	}
 	
-	@PutMapping("/movie")
-	public Movie editMovie(@RequestBody Movie movie) {
-		return movieService.updateMovie(movie);	
+	@PutMapping("/movie/{id}")
+	public Movie editMovie(@PathVariable("id") Long id, @RequestBody Movie movie) {
+		Optional<Movie> m = movieService.readMovie(id);
+		Movie updateMovie = m.get();
+		updateMovie.setName(movie.getName());
+		return movieService.updateMovie(updateMovie);
 	}
 	
 	@GetMapping("/movie/{id}")
 	public Movie readMovie(@PathVariable("id") Long id) {
-		Optional<Movie> b = movieService.readMovie(id);
-		return b.get();
+		Optional<Movie> m = movieService.readMovie(id);
+		return m.get();
 	}
 	
 	@GetMapping("/movie")
 	public List<Movie> readMovies(){
 		List<Movie> movies = movieService.readMovies();
-		System.out.println("Movies read" + movies.size());
+		System.out.println("Movies read " + movies.size());
 		return movies;
 	}
 	
 	@DeleteMapping("/movie")
-	public String deleteMovie(@RequestParam(value="movieId")Long id) {
+	public String deleteMovie(@RequestParam(value="id") Long id) {
 		Optional<Movie> m = movieService.readMovie(id);
 		movieService.deleteMovie(m.get());
-		return "Movie Id " + id + "was deleted";
+		return "Movie Id " + id + " was deleted";
 	}
 }

@@ -33,7 +33,7 @@ public class UserController {
 	}
 	
 	@GetMapping("/users")
-	public List<User> readMovies(){
+	public List<User> readUsers(){
 		List<User> users = userService.readUsers();
 		System.out.println("Users read" + users.size());
 		return users;
