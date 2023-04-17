@@ -23,5 +23,6 @@ public class TestRectangle {
 			rectangles[j].display();
 			j++;
 		}
+		sc.close();
 	}
 }

@@ -26,7 +26,7 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private Long id;
 	private String name;
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="uf_fid", referencedColumnName = "id")

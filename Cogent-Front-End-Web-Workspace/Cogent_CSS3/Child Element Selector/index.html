@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Child Element CSS3</title>
+        <style>
+            h1 {
+                background-color:rgb(234, 239, 239);
+                text-align: center;
+            }
+
+            h1 em {
+                color: blue;
+            }
+
+            ul.menu {
+                padding: 10px;
+                text-align: center;
+            }
+
+            ul.menu > li {
+                display: inline;
+                margin: 15px;
+            }
+
+            ul.menu li > a {
+                text-decoration: underline;
+            }
+        </style>
+    </head> 
+    <body>
+        
+        <h1>Welcome to <em>Cogent University!!!</em></h1>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </body>
+
+</html>

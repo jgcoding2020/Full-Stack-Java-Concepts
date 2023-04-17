@@ -1,0 +1,11 @@
+h1 {
+    background-color: blue;
+}
+
+.class-selector {
+    background-color: green;
+}
+
+#id-selector {
+    background-color: yellow;
+}

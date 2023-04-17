@@ -14,9 +14,11 @@ public class OneToManyJpaApplication implements CommandLineRunner{
 
 	@Autowired
 	StudentRepository studentRepository;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(OneToManyJpaApplication.class, args);
 	}
+	
 	@Override
 	public void run(String... args) throws Exception {
 		Course c1 = new Course("Java programming","$1,200");

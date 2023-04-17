@@ -108,6 +108,7 @@ public class Test {
 					break;
 				}
 			} while (choice != 6);
+			((ClassPathXmlApplicationContext) ctx).close();
 			System.out.println("You have successfully exited!!!");
 		} catch (Exception e){
 			e.printStackTrace();

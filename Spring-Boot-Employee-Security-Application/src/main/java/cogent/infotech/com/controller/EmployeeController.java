@@ -14,6 +14,7 @@ import cogent.infotech.com.entity.Employee;
 import cogent.infotech.com.service.EmployeeService;
 
 @RestController
+@RequestMapping("/api")
 public class EmployeeController {
 
 	@Autowired
