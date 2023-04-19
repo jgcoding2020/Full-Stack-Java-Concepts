@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Angular Framework</title>
+    </head>
+    <body>
+        <div *ngIf = "toDisplay">
+            {{itemNo}}
+            {{itemName}}
+            {{itemPrice}}
+        </div>
+        <div *ngIf = "toDisplay">
+            <img [src]="imageUrl">
+            <button (click)="update()">edit</button>
+            <button (click)="delete()">Delete</button>
+        </div>
+        <div *ngIf = "toUpdate">
+            Enter item number: <input type="number" [(ngModel)]="itemNo"><br>
+            Enter item name: <input type="text" [(ngModel)]="itemName"><br>
+            Enter item price: <input type="number" [(ngModel)]="itemPrice"><br>
+            Enter item url: <input type="text" [(ngModel)]="imageUrl"><br>
+            <button (click)="update()">update</button>
+        </div>
+    </body>
+</html>
