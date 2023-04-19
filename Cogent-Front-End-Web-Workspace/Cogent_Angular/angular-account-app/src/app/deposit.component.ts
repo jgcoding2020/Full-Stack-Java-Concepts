@@ -11,7 +11,7 @@ export class DepositComponent{
     valueChange = new EventEmitter();
     depositAmount = 0;
     deposit(data: any){
-        this.depositAmount += data.amount;
+        this.depositAmount = data.amount;
         this.valueChange.emit(this.depositAmount);
     }
 }
