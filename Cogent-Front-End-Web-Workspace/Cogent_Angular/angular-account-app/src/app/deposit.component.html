@@ -1,0 +1,4 @@
+<form #depositForm = "ngForm" (ngSubmit) = "deposit(depositForm.value)">
+    <input type="number" name="amount" ngModel>
+    <button type="submit" value="submit">deposit</button>
+</form>
