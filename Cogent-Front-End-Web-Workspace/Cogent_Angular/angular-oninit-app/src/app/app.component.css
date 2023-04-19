@@ -1,0 +1,21 @@
+h1 {
+    background-color: rgb(193, 189, 189);
+    margin:auto;
+    width: 23.5%;
+    text-align: center;
+    border: ridge 10px gray;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+table {
+    background-color: beige;
+    border: ridge 10px gray;
+    margin:auto;
+    width: 25%;
+    padding: 5px;
+}
+
+td {
+    text-align: center;
+}

@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+h1 {
+    background-color: black;
+    color: whitesmoke;
+    width: 20%;
+    border: ridge rgb(245, 238, 220);
+    padding: 5px;
+}
+
+.item, .product {
+    background-color: beige;
+    border: solid black;
+    width: 20%;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+body {
+    background-color: wheat;
+}

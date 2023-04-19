@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+h1 {
+    background-color: bisque;
+    border: solid black;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+body {
+    background-color: burlywood;
+}

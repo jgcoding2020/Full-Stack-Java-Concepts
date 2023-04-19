@@ -1,0 +1,22 @@
+.card {
+    font-family: arial;
+    font-size: 24px;
+    margin: 50px auto;
+    width: 25%;
+    height: 100px;
+    outline: solid 5px black;
+    padding: 10px;
+    background-color: rgb(50, 50, 143);
+    color: azure;
+    
+}
+
+.card-header {
+    display: inline-block;
+    margin-right: 45px;
+    font-weight: bold;
+}
+
+.card-body {
+    display: inline-block;
+}

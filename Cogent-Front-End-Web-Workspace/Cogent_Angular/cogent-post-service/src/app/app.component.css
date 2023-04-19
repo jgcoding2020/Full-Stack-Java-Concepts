@@ -1,0 +1,16 @@
+thead {
+    background-color: black;
+    color: white;
+}
+
+table {
+    border: solid black;
+}
+
+td {
+    border: solid black;
+}
+
+tr:nth-child(even) {
+    background-color: aliceblue;
+}

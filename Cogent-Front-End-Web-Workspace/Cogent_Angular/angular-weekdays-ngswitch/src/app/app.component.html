@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    Select day of week
+  </div>
+
+  <div class="card-body">
+    <select [(ngModel)]="selectedValue1">
+      <option *ngFor="let item of items" [value]="item.value">{{item.value}}</option>
+    </select>
+  </div>
+
+  <div class="result" [ngSwitch]="selectedValue1">
+    <p *ngSwitchCase="1">Monday</p>
+    <p *ngSwitchCase="2">Tuesday</p>
+    <p *ngSwitchCase="3">Wednesday</p>
+    <p *ngSwitchCase="4">Thursday</p>
+    <p *ngSwitchCase="5">Friday</p>
+    <p *ngSwitchCase="6">Saturday</p>
+    <p *ngSwitchCase="7">Sunday</p>
+    <p *ngSwitchDefault>switch default</p>
+  </div>
+</div>

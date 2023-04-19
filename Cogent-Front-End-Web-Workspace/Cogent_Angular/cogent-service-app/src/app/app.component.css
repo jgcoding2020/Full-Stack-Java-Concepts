@@ -1,0 +1,9 @@
+h1 {
+    background-color: gray;
+}
+
+table {
+    background-color: beige;
+    border-style: ridge;
+    border-radius: 5px;
+}

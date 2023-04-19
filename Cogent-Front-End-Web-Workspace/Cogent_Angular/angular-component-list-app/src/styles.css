@@ -1,4 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
-table th {
-    margin: 15px;
+table {
+    margin:auto;
+    border: solid black;
+    width: 25%;
+    font-size: large;
+}
+
+tr:nth-child(even) {
+    background-color: darkgray;
+}
+
+th {
+    background-color:blanchedalmond;
+    border: solid black;
+}
+
+h1 {
+    background-color:burlywood;
+    width: 25%;
+    text-align: center;
+    margin: auto;
+    border: solid black;
+}
+
+body {
+    background-color: coral;
 }

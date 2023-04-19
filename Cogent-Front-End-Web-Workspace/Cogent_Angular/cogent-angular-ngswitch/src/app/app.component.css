@@ -1,0 +1,22 @@
+h1 {
+    background-color: black;
+    color: whitesmoke;
+    width: 52%;
+    margin: auto;
+    text-align: center;
+}
+
+.card {
+    background-color: antiquewhite;
+    border: solid black;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-header {
+    margin: 15px 0px;
+    background-color: bisque;
+    font-weight: bold;
+}

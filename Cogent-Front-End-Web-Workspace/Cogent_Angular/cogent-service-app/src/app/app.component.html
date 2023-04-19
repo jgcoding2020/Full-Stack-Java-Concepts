@@ -1,0 +1,17 @@
+<h1>{{title|uppercase}}</h1>
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Stock</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td *ngIf="product.showMessage">{{product.id}}</td>
+      <td *ngIf="product.showMessage">{{product.title}}</td>
+      <td *ngIf="product.showMessage">{{product.price|currency}}</td>
+      <td *ngIf="product.showMessage">{{product.stock}}</td>
+    </tr>
+  </tbody>
+</table>
