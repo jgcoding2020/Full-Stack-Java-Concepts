@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+table {
+    border: ridge black 10px;
+    background-color: beige;
+    width: 50%;
+    margin: auto;
+    padding: 30px 40px 40px 40px;
+}
+
+td {
+    border: solid black;
+}
+
+thead {
+    border: solid black;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(198, 196, 196);
+}
+
+body {
+    background-color: rgb(132, 130, 130); 
+}
