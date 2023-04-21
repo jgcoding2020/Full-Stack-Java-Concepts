@@ -1,0 +1,53 @@
+<form novalidate #addPersonForm="ngForm" (ngSubmit)="onSubmitAdd(addPersonForm)">
+    <div>
+        <label for="name">Name </label>
+        <input type="text" [(ngModel)]="personForm.personName" name="name" placeholder="Enter your name" required>
+    </div>
+    <div>
+        <label for="age">Age </label>
+        <input type="number" [(ngModel)]="personForm.personAge" name="age" placeholder="Enter your age" required>
+    </div>
+    <div>
+        <label for="salary">Salary </label>
+        <input type="number" [(ngModel)]="personForm.personSalary" name="salary" placeholder="Enter your salary">
+    </div>
+    <button [disabled]="addPersonForm.invalid" (click)="refresh()" type="submit">Add</button>
+    <button (click)= 'resetForm()'>Reset Form</button>
+</form>
+
+<table>
+    <thead>
+        <th>User Id</th>
+        <th>User Name</th>
+        <th>User Age</th>
+        <th>User Salary</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of people">
+            <td>{{person.personId}}</td>
+            <td>{{person.personName}}</td>
+            <td>{{person.personAge}}</td>
+            <td>{{person.personSalary}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+<div *ngIf="toggleEditForm">
+    <h1>Update Person #{{currPersonID}}</h1>
+    <form novalidate #addPersonForm="ngForm" (ngSubmit)="onSubmitEdit(addPersonForm)">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" [(ngModel)]="personForm.personName" name="name" placeholder="Enter your name" required>
+        </div>
+        <div>
+            <label for="age">Age</label>
+            <input type="number" [(ngModel)]="personForm.personAge" name="age" placeholder="Enter your age" required>
+        </div>
+        <div>
+            <label for="salary">Salary</label>
+            <input type="number" [(ngModel)]="personForm.personSalary" name="salary" placeholder="Enter your salary">
+        </div>
+        <button [disabled]="addPersonForm.invalid" (click)="refresh()" type="submit">Edit</button>
+    </form>
+</div>
