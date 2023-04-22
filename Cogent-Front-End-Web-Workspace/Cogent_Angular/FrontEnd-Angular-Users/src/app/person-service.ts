@@ -20,7 +20,7 @@ export class PersonService {
     }
 
     updatePerson(person: Person): Observable<Person> {
-        return this.http.put<Person>(this.baseUrl, person);
+        return this.http.put<Person>(this.baseUrl + "/put", person);
     }
 
     getPeople():Observable<Person[]> {
@@ -28,6 +28,6 @@ export class PersonService {
     }
    
     deletePerson(id: number): Observable<Person> {
-        return this.http.delete<Person>(`${this.baseUrl}` + "/delete/{"+ id + "}");
+        return this.http.delete<Person>(`${this.baseUrl}` + "/delete/" + id);
       }
 }

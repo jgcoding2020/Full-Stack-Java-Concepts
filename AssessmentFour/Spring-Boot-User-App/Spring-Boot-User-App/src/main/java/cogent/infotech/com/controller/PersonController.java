@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,23 +24,23 @@ public class PersonController {
 	@Autowired
 	private PersonRepository personRepository;
 	
-	@PostMapping("/add/person")
+	@PostMapping("/person/post")
 	public Person addPerson(@RequestBody Person person) {
 		return personRepository.save(person);
 	}
 	
-	@GetMapping("/people")
+	@GetMapping("/person/get")
 	public List<Person> getPeople(){
 		return this.personRepository.findAll();
 	}
 	
-	@PutMapping("/edit/person")
-	public Person editBook(@RequestBody Person person) {
+	@PutMapping("/person/put")
+	public Person editPerson(@RequestBody Person person) {
 		return personRepository.save(person);	
 	}
 	
-	@DeleteMapping("/delete/person")
-	public void deletePerson(Person person) {
-		personRepository.delete(person);
+	@DeleteMapping("/person/delete/{id}")
+	public void deletePerson(@PathVariable("id") long personId) {
+		personRepository.deleteById(personId);
 	}
 }

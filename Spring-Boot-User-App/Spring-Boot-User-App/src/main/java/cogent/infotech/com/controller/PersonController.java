@@ -35,12 +35,12 @@ public class PersonController {
 	}
 	
 	@PutMapping("/person/put")
-	public Person editBook(@RequestBody Person person) {
+	public Person editPerson(@RequestBody Person person) {
 		return personRepository.save(person);	
 	}
 	
 	@DeleteMapping("/person/delete/{id}")
-	public void deletePerson(@PathVariable long personId) {
+	public void deletePerson(@PathVariable("id") long personId) {
 		personRepository.deleteById(personId);
 	}
 }

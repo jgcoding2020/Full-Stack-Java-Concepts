@@ -13,7 +13,7 @@ export class PersonComponent implements OnInit {
     personForm: Person;
     currPerson: Person;
     currPersonID: number;
-    toggleEditForm: boolean=true;
+    toggle: boolean=false;
 
     constructor(private personService: PersonService) 
     {
@@ -45,24 +45,25 @@ export class PersonComponent implements OnInit {
     edit(id:number)
     {
         this.currPersonID = id;
-        this.toggleEditForm = true;   
+        this.toggle = !this.toggle; 
     }
 
-    onSubmitEdit(addPersonForm: any)
+    onSubmitEdit(editPersonForm: any)
     {
         this.currPerson.personId = this.currPersonID;
-        this.currPerson.personName = addPersonForm.value.name;
-        this.currPerson.personAge = addPersonForm.value.age;
-        this.currPerson.personSalary = addPersonForm.value.salary;
+        this.currPerson.personName = editPersonForm.value.name;
+        this.currPerson.personAge = editPersonForm.value.age;
+        this.currPerson.personSalary = editPersonForm.value.salary;
 
-        console.log(addPersonForm.value);
+        console.log(editPersonForm.value);
 
-        this.toggleEditForm=false;
+        this.toggle=false;
         this.personService.updatePerson(this.currPerson).subscribe();
     }
 
     delete(id:number)
     {
+        console.log(id);
         this.personService.deletePerson(id).subscribe();
     }
 
