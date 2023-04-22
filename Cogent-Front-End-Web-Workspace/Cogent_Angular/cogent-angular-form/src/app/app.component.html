@@ -1,0 +1,8 @@
+<h1>hi</h1>
+<form novalidate #loginForm='ngForm' (ngSubmit)="onSubmit(loginForm)">
+  <label for="user_id">User Id: </label>
+  <input type="text" [(ngModel)]='model.id' name="user_id" required>
+  <label for="password">Password: </label>
+  <input type="password" [(ngModel)]='model.pwd' name="password" required>
+  <button [disabled]='loginForm.invalid' type="submit">Login</button>
+</form>

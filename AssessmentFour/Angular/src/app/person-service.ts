@@ -9,14 +9,14 @@ import { Person } from './person';
 
 export class PersonService {
 
-    private baseUrl = "http://localhost:3306/api";
+    private baseUrl = "http://localhost:8080/api/person";
 
     constructor(private http: HttpClient){
 
     }
 
     addPerson(person: Person): Observable<Person> {
-        return this.http.post<Person>(this.baseUrl, person);
+        return this.http.post<Person>(`${this.baseUrl}` + "/post", person);
     }
 
     updatePerson(person: Person): Observable<Person> {
@@ -24,10 +24,10 @@ export class PersonService {
     }
 
     getPeople():Observable<Person[]> {
-        return this.http.get<Person[]>((`${this.baseUrl}`));
+        return this.http.get<Person[]>(`${this.baseUrl}` + "/get");
     }
    
     deletePerson(id: number): Observable<Person> {
-        return this.http.delete<Person>((`${this.baseUrl}/id=${id}`));
+        return this.http.delete<Person>(`${this.baseUrl}` + "/delete/{"+ id + "}");
       }
 }

@@ -12,7 +12,7 @@
         <input type="number" [(ngModel)]="personForm.personSalary" name="salary" placeholder="Enter your salary">
     </div>
     <button [disabled]="addPersonForm.invalid" (click)="refresh()" type="submit">Add</button>
-    <button (click)= 'resetForm()'>Reset Form</button>
+    <button (click)='resetForm()'>Reset Form</button>
 </form>
 
 <table>
@@ -33,9 +33,9 @@
 </table>
 <br>
 
-<div *ngIf="toggleEditForm">
-    <h1>Update Person #{{currPersonID}}</h1>
-    <form novalidate #addPersonForm="ngForm" (ngSubmit)="onSubmitEdit(addPersonForm)">
+<form novalidate #addPersonForm="ngForm" (ngSubmit)="onSubmitEdit(addPersonForm)">
+    <h2>Update Person {{currPersonID}}</h2>
+    <div *ngIf="toggleEditForm">
         <div>
             <label for="name">Name</label>
             <input type="text" [(ngModel)]="personForm.personName" name="name" placeholder="Enter your name" required>
@@ -48,6 +48,13 @@
             <label for="salary">Salary</label>
             <input type="number" [(ngModel)]="personForm.personSalary" name="salary" placeholder="Enter your salary">
         </div>
-        <button [disabled]="addPersonForm.invalid" (click)="refresh()" type="submit">Edit</button>
-    </form>
-</div>
+    </div>
+
+    <button (click)="refresh()" type="submit">Edit</button>
+</form>
+
+<form novalidate #deletePersonForm="ngForm" (ngSubmit)="delete(deletePersonForm.value)">
+    <label for="deleteId">Delete Id:</label>
+    <input type="number" [(ngModel)]="personForm.personId" name="deleteId" placeholder="Enter Id to delete">
+    <button type="submit">Remove</button>
+</form>

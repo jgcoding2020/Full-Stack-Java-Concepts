@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+    text-align: center;
+    border: ridge 10px gray;
+    padding: 25px;
+    width: 25%;
+    margin: 50px auto;
+}
+
+nav {
+    width: 25%;
+    margin: auto;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+}
+
+.home {
+    background-color: yellow;
+}
+
+.about {
+    background-color: bisque;
+}
+
+.contact {
+    background-color: green;
+    color: white;
+}
+
+.careers {
+    background-color: blue;
+    color: white;
+}

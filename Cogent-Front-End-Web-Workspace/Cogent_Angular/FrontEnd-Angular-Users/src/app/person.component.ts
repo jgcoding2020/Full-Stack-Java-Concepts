@@ -8,13 +8,12 @@ import { Person } from './person';
 })
 
 export class PersonComponent implements OnInit {
-    title = 'user-management-app';
 
     people: Person[];
     personForm: Person;
     currPerson: Person;
     currPersonID: number;
-    toggleEditForm: boolean=false;
+    toggleEditForm: boolean=true;
 
     constructor(private personService: PersonService) 
     {
@@ -29,11 +28,6 @@ export class PersonComponent implements OnInit {
             console.log(data);
             this.people = data;
         })
-    }
-
-    add(person: Person)
-    {
-        this.personService.addPerson(person).subscribe();
     }
 
     onSubmitAdd(addPersonForm: any)
@@ -80,5 +74,5 @@ export class PersonComponent implements OnInit {
     resetForm()
     {
         this.personForm = new Person();
-    }
+    } 
 }
