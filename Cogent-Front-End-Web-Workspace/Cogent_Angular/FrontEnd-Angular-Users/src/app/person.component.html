@@ -1,6 +1,7 @@
-<form novalidate #editPersonForm="ngForm" (ngSubmit)="onSubmitEdit(editPersonForm)">
-    <div *ngIf="toggle">
-        <h2>Update User {{currPersonID}}</h2>
+<form *ngIf="toggle" novalidate #editPersonForm="ngForm" (ngSubmit)="onSubmitEdit(editPersonForm)">
+    <h3><span>Update User {{currPersonID}}</span></h3>
+    <table>
+
         <div>
             <label for="name">Name</label>
             <input type="text" [(ngModel)]="personForm.personName" name="name" placeholder="Enter your name" required>
@@ -11,31 +12,36 @@
         </div>
         <div>
             <label for="salary">Salary</label>
-            <input type="number" [(ngModel)]="personForm.personSalary" name="salary" placeholder="Enter your salary" required>
+            <input type="number" [(ngModel)]="personForm.personSalary" name="salary" placeholder="Enter your salary"
+                required>
         </div>
-        <button [disabled]="editPersonForm.invalid" (click)="refresh()" type="submit">Update</button>
-        <button (click)='resetForm()'>Reset Form</button>
-    </div>
+        <button class="update-button" [disabled]="editPersonForm.invalid" (click)="refresh()" type="submit">Update</button>
+        <button class="reset-button" (click)='resetForm()'>Reset Form</button>
+    </table>
 </form>
 
 <form *ngIf="!toggle" novalidate #addPersonForm="ngForm" (ngSubmit)="onSubmitAdd(addPersonForm)">
-    <h2>User</h2>
-    <div>
-        <label for="name">Name </label>
-        <input type="text" [(ngModel)]="personForm.personName" name="name" placeholder="Enter your name" required>
-    </div>
-    <div>
-        <label for="age">Age </label>
-        <input type="number" [(ngModel)]="personForm.personAge" name="age" placeholder="Enter your age" required>
-    </div>
-    <div>
-        <label for="salary">Salary </label>
-        <input type="number" [(ngModel)]="personForm.personSalary" name="salary" placeholder="Enter your salary" required>
-    </div>
-    <button [disabled]="addPersonForm.invalid" (click)="refresh()" type="submit">Add</button>
-    <button (click)='resetForm()'>Reset Form</button>
+    <h3><span>User</span></h3>
+    <table>
+        <div>
+            <label for="name">Name </label>
+            <input type="text" [(ngModel)]="personForm.personName" name="name" placeholder="Enter your name" required>
+        </div>
+        <div>
+            <label for="age">Age </label>
+            <input type="number" [(ngModel)]="personForm.personAge" name="age" placeholder="Enter your age" required>
+        </div>
+        <div>
+            <label for="salary">Salary </label>
+            <input type="number" [(ngModel)]="personForm.personSalary" name="salary" placeholder="Enter your salary"
+                required>
+        </div>
+        <button class="add-button" [disabled]="addPersonForm.invalid" (click)="refresh()" type="submit">Add</button>
+        <button class="reset-button" (click)='resetForm()'>Reset Form</button>
+    </table>
 </form>
 
+<h3><span>List of Users</span></h3>
 <table>
     <thead>
         <th>Id</th>
@@ -49,8 +55,8 @@
             <td>{{person.personName}}</td>
             <td>{{person.personAge}}</td>
             <td>{{person.personSalary}}</td>
-            <button (click)="edit(person.personId)">Edit</button>
-            <button (click)="delete(person.personId)" (click)="refresh()">Remove</button>
+            <button class="edit-button" (click)="edit(person.personId)">Edit</button>
+            <button class="remove-button" (click)="delete(person.personId)" (click)="refresh()">Remove</button>
         </tr>
     </tbody>
 </table>
