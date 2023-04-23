@@ -57,7 +57,7 @@
             <td>{{person.personId}}</td>
             <td>{{person.personName}}</td>
             <td>{{person.personAge}}</td>
-            <td>{{person.personSalary}}</td>
+            <td>{{person.personSalary|currency}}</td>
             <button class="edit-button" (click)="edit(person.personId)">Edit</button>
             <button class="remove-button" (click)="delete(person.personId)" (click)="refresh()">Remove</button>
         </tr>

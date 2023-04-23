@@ -1,28 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-table {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    width: 90%;
-    margin: auto;
-    border: solid black 1px;
-    border-top: none;
-    padding: 15px;
-    background-color: white;
-}
-
-td {
-    padding: 10px;
-}
-
-.user-list td {
-    text-align: center;
-    width: 15%;
-}
-
-tr {
-    margin: 20px;
-}
-
 h3 {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -33,6 +9,26 @@ h3 {
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: rgb(233, 232, 232);
+}
+
+table {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 90%;
+    margin: auto;
+    border: solid black 1px;
+    border-top: none;
+    padding: 10px;
+    background-color: white;
+}
+
+td {
+    padding: 10px;
+}
+
+.user-list td {
+    text-align: center;
+    width: 15%;
 }
 
 span {
@@ -64,7 +60,7 @@ input {
 .edit-button {
     background-color: rgb(52, 169, 52);
     padding: 8px 10px;
-    margin: 20px;
+    margin: 5px 20px;
     width: 50px;
 }
 
