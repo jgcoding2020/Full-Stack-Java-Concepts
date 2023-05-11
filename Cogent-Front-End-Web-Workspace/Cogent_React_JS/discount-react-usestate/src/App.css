@@ -1,0 +1,80 @@
+.div-outer {
+  width: 50%;
+  margin: auto;
+  border: solid black 10px;
+  margin-top: 50px;
+  background-color: blue;
+  border-radius: 15px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;  
+  background-color: black;
+  color: white;
+  text-shadow: 1px 1px 2px blue, 0 0 25px blue, 0 0 5px blue;
+}
+
+.div-table {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 75px;
+  border: solid black;
+  background-color: aliceblue;
+  flex-direction: row;
+}
+
+/* Responsive layout */
+@media (max-width: 800px) {
+  .div-table {
+    flex-direction: column;
+  }
+}
+
+
+img {
+  border: solid black;
+  margin: auto;
+  margin-right: 25px;
+}
+
+table {
+  width: 75%;
+  margin: auto;
+  border: solid black;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: black;
+  color:aliceblue;
+  box-shadow: 5px 10px 20px blue inset;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.td-price, .td-product, .td-item-no {
+  text-align: right;
+}
+
+td {
+  padding: 10px;
+}
+
+button {
+  width: 100%;
+  margin: auto;
+  transition-duration: 0.4s;
+  background-color: aliceblue;
+  padding: 5px;
+  border: solid blue 2px;
+}
+
+button:hover {
+  background-color: blue;
+  color: white;
+}
+
+body {
+  background-image: url("./images/bg.avif");
+}
+
+
+

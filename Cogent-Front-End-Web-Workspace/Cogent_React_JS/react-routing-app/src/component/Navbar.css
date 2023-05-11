@@ -1,0 +1,7 @@
+nav {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: greenyellow;
+    padding: 10px;
+}

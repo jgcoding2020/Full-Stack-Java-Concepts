@@ -1,0 +1,60 @@
+.div-outer {
+  width: 50%;
+  margin: auto;
+  border: solid black 10px;
+  margin-top: 75px;
+  background-color: blue;
+  border-radius: 15px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;  
+  background-color: black;
+  color: white;
+  text-shadow: 1px 1px 2px blue, 0 0 25px blue, 0 0 5px blue;
+}
+
+.div-table {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+  border: solid black;
+  background-color: aliceblue;
+}
+
+table {
+  width: 75%;
+  margin: auto;
+  border: solid black;
+  padding: 25px;
+  border-radius: 15px;
+  background-color: black;
+  color:aliceblue;
+  box-shadow: 5px 10px 20px blue inset;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+input {
+  width: 95%;
+}
+
+.td-balance, .td-deposit-amount {
+  text-align: right;
+}
+
+td {
+  padding: 10px;
+}
+
+button {
+  width: 100%;
+  margin: auto;
+}
+
+body {
+  background-image: url("./images/bg.avif");
+}
+
+
+

@@ -1,0 +1,24 @@
+.div-inner-clock {
+  border: solid black;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  background-color: brown;
+  color: white;
+  border: solid gray;
+}
+
+.div-outer-clock {
+  width: 20%;
+  margin: auto;
+  margin-top: 25px;;
+  border: ridge black 5px;
+  padding: 40px;
+  background-color: black;
+  box-shadow: 5px 10px 18px black;
+}
+
+body {
+  background-color: gray;
+}
