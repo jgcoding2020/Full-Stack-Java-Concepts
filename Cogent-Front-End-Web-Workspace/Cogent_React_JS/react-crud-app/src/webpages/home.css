@@ -1,0 +1,79 @@
+div {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+}
+
+.div-add-search {
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+}
+
+.label-search {
+   margin-left: 10px;
+}
+
+.button-add {
+    display:flex;
+    justify-content: center;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    opacity: .8;
+    width: 20%;;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+}
+
+th {
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+img {
+    width: 50%;
+    border: solid black;
+}
+
+td {
+    padding: 25px 50px 25px 0px;
+    text-align: left;
+}
+
+.td-buttons {
+    display:flex;
+    justify-content: space-evenly;
+} 
+
+.button-update {
+    display:flex;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    opacity: .8;
+}
+
+.button-delete {
+    background-color: red;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    opacity: .8;
+}
