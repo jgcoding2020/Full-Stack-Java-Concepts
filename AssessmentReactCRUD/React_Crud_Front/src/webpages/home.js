@@ -65,8 +65,8 @@ const Home = () => {
                         {users.map(user => (
                             <tr key={user.id}>
                                 <td className="td-img"><img src={user.picture} alt="head shot"></img></td>
-                                <td>{user.first_name}</td>
-                                <td>{user.last_name}</td>
+                                <td className="td-first-name">{user.first_name}</td>
+                                <td className="td-last-name">{user.last_name}</td>
                                 <td className="td-email">{user.email}</td>
                                 <td className="td-buttons">
                                     <button className="button-update" onClick={() => handleUpdateUser(user.id)}>Update</button>
