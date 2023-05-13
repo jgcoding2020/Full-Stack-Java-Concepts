@@ -26,7 +26,7 @@ function AddUser() {
     };
 
     return (
-        <div class="div-outer">
+        <div className="div-outer">
             <h1>Add User</h1>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -34,7 +34,7 @@ function AddUser() {
                     <input
                         type="text"
                         id="first_name"
-                        className="form-control"
+                        name="first_name"
                         value={first_name}
                         onChange={(e) => setFirstname(e.target.value)}
                     ></input>
@@ -44,7 +44,7 @@ function AddUser() {
                     <input
                         type="text"
                         id="last_name"
-                        className="form-control"
+                        name="last_name"
                         value={last_name}
                         onChange={(e) => setLastname(e.target.value)}
                     ></input>
@@ -54,7 +54,7 @@ function AddUser() {
                     <input
                         type="email"
                         id="email"
-                        className="form-control"
+                        name="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     ></input>
@@ -64,12 +64,12 @@ function AddUser() {
                     <input
                         type="string"
                         id="picture"
-                        className="form-control"
+                        name="picture"
                         value={picture}
                         onChange={(e) => setPicture(e.target.value)}
                     ></input>
                 </div>
-                <button class="button-submit-add" type="submit">Submit</button>
+                <button className="button-submit-add" type="submit">Submit</button>
             </form>
         </div>
     );

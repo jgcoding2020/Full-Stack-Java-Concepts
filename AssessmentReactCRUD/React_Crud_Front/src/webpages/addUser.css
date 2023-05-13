@@ -7,6 +7,7 @@
 form {
     width: 25%;
     margin: auto;
+    margin-top: 75px;
     border: solid black;
     padding: 25px;
     border-radius: 15px;

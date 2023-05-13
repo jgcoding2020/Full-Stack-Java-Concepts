@@ -27,15 +27,15 @@ function UpdateUser() {
     };
 
     return (
-        <div class="div-outer">
-            <h1>Update User</h1>
+        <div className="div-outer">
+            <h1>Update User { id }</h1>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="first_name">First Name</label>
                     <input
                         type="text"
                         id="first_name"
-                        className="form-control"
+                        name="first_name"
                         value={first_name}
                         onChange={(e) => setFirstname(e.target.value)}
                     ></input>
@@ -45,7 +45,7 @@ function UpdateUser() {
                     <input
                         type="text"
                         id="last_name"
-                        className="form-control"
+                        name="last_name"
                         value={last_name}
                         onChange={(e) => setLastname(e.target.value)}
                     ></input>
@@ -55,7 +55,7 @@ function UpdateUser() {
                     <input
                         type="email"
                         id="email"
-                        className="form-control"
+                        name="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     ></input>
@@ -65,12 +65,12 @@ function UpdateUser() {
                     <input
                         type="string"
                         id="picture"
-                        className="form-control"
+                        name="picture"
                         value={picture}
                         onChange={(e) => setPicture(e.target.value)}
                     ></input>
                 </div>
-                <button class="button-submit-add" type="submit">Submit</button>
+                <button className="button-submit-add" type="submit">Submit</button>
             </form>
         </div>
     );

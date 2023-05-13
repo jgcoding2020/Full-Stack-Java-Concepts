@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './home.css'
 
 const Home = () => {
@@ -45,31 +44,33 @@ const Home = () => {
         return (
             <div>
                 <h1>React CRUD App</h1>
-                <div class="div-add-search">
-                    <label class="input-search">
-                        <input type="text"></input>
-                        <button class="button-search">Search</button>
+                <div className="div-add-search">
+                    <label className="input-search" htmlFor="search">
+                        <input type="text" name="search" id="search" placeholder="name"></input>
+                        <button className="button-search">Search</button>
                     </label>
-                    <button class="button-add" onClick={handleAddUser}>Create User</button>
+                    <button className="button-add" onClick={handleAddUser}>Create User</button>
                 </div>
                 <table>
                     <thead>
-                        <th>Selfie</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Actions</th>
+                        <tr>
+                            <th>Selfie</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                        </tr>
                     </thead>
                     <tbody key={users.id}>
                         {users.map(user => (
                             <tr key={user.id}>
-                                <td class="td-img"><img src={user.picture}></img></td>
+                                <td className="td-img"><img src={user.picture} alt="head shot"></img></td>
                                 <td>{user.first_name}</td>
                                 <td>{user.last_name}</td>
-                                <td>{user.email}</td>
-                                <td class="td-buttons">
-                                    <button class="button-update" onClick={() => handleUpdateUser(user.id)}>Update</button>
-                                    <button class="button-delete" onClick={() => handleDeleteUser(user.id)}>Delete</button>
+                                <td className="td-email">{user.email}</td>
+                                <td className="td-buttons">
+                                    <button className="button-update" onClick={() => handleUpdateUser(user.id)}>Update</button>
+                                    <button className="button-delete" onClick={() => handleDeleteUser(user.id)}>Delete</button>
                                 </td>
                             </tr>
                         ))}
