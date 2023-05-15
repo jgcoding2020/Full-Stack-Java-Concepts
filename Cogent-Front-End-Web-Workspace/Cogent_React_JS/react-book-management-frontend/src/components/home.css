@@ -1,0 +1,108 @@
+div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: solid white;
+    border-top: solid white;
+}
+
+body {
+    background-color: beige;
+}
+
+.div-add-book {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+}
+
+.button-add {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    opacity: .8;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 800px) {
+    table {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+th {
+    text-align: left;
+    font-size: x-large;
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+td {
+    padding: 25px 25px 25px 0px;
+    text-align: left;
+    border: solid black;
+    border-collapse: collapse;
+}
+
+/* .td-title {
+    padding: 0px;
+    overflow-x: scroll;
+    max-width: 100px;
+} */
+
+.td-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 75px 0px;
+}
+
+@media (max-width: 800px) {
+    .td-buttons {
+        flex-direction: column;
+        padding: 40px 0px;
+    }
+}
+
+.button-update {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    opacity: .8;
+}
+
+.button-delete {
+    background-color: red;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+    opacity: .8;
+}
