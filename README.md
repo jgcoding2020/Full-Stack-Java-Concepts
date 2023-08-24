@@ -1,8 +1,9 @@
 # cogent_infotech
 
-These are programs that I wrote during the attendance of Cogent Infotech's full stack Java developer training boot camp. 
-The content revolves around usage of Java including but not limited to:
+I developed these programs while participating in Cogent Infotech's comprehensive Java Full Stack Developer training boot camp. These projects encompass various aspects of Java, including:
 
-Front-end: HTML5, CSS3, BootStrap, JavaScript, TypeScript, Angular 15 Framework, React JS Library
+Front-end technologies: HTML5, CSS3, Bootstrap, JavaScript, TypeScript, Angular 15 Framework, React JS Library.
 
-Back-end: Core Java, Advanced Java, Spring, Spring Boot, Spring Security, Rest APIs, JPA, Hibernate, JWT, SQL, MySQL, H2 database, Postman
+Back-end technologies: Core Java, Advanced Java, Spring, Spring Boot, Spring Security, Rest APIs, JPA, Hibernate, JWT (JSON Web Tokens), SQL, MySQL, H2 database, and Postman.
+
+These programs showcase my skills and experience in both front-end and back-end development using a wide range of tools and technologies.
