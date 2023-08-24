@@ -1,6 +1,6 @@
 # cogent_infotech
 
-I ([Joshua David Gardner, aka jgcoding2020](https://jgcoding2020.github.io/My-Portfolio/)) developed these programs while participating in Cogent Infotech's comprehensive Java Full Stack Developer training boot camp. These projects encompass various aspects of Java, including:
+I ([Joshua David Gardner, AKA jgcoding2020](https://jgcoding2020.github.io/My-Portfolio/)) developed these programs while participating in Cogent Infotech's comprehensive Java Full Stack Developer training boot camp. These projects encompass various aspects of Java, including:
 
 Front-end technologies: HTML5, CSS3, Bootstrap, JavaScript, TypeScript, Angular 15 Framework, React JS Library.
 
