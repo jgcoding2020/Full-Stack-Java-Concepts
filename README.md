@@ -1,6 +1,4 @@
-# cogent_infotech
-
-I ([Joshua David Gardner, AKA jgcoding2020](https://jgcoding2020.github.io/My-Portfolio/)) developed these programs. 
+[Joshua David Gardner, AKA jgcoding2020](https://jgcoding2020.github.io/My-Portfolio/) developed these programs. 
 
 These projects encompass various aspects of Java, including:
 
